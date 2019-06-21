@@ -1,79 +1,68 @@
+엑셀로 만들어봐.
+
+프로젝트이름: 
+
 membermvc
+
 	src
-	  - com.kitri.admin.controller
-	    AdminController.java (Servlet : /admin)
-	  
-	  - com.kitri.admin.model
-	  
-	  - com.kitri.admin.model.dao
-	    AdminDao.java (I)
-	    AdminDaoImpl.java
-	  
-	  - com.kitri.admin.model.service
-	    AdminService.java (I)
-	    AdminServiceImpl.java
-	  
-	  - com.kitri.member.controller
-	    MemberController.java (Servlet : /user)
-	  
-	  - com.kitri.member.model
-	    MemberDto.java
-	    MemberDetailDto.java
-	    ZipcodeDto.java
-	  
-	  - com.kitri.member.model.dao
-	    MemberDao.java (I)
-	    MemberDaoImpl.java 
-	  
-	  - com.kitri.member.model.service
-	    MemberService.java (I)
-	    MemberServiceImpl.java
-	  
-	  - com.kitri.util
-	    DBConnection.java
-	    DBClose.java
-	    Encoder.java
-	  
-	
-	webContent
-	  - js : member.js
-	  - css : *.css
-	  - img : *.jpg, png, gif
-	  - admin
-	    - member
-	      memberlist.jsp
+     - com.kitri.admin.controller
+	   AdminController.java (Servlet : /admin)
+
+	 - com.kitri.admin.model
+
+	 - com.kitri.admin.model.dao
+	   AdminDao.java (I)
+	   AdminDaoImpl.java 
+	   
+	 - com.kitri.admin.model.service
+	   AdminService.java (I)
+	   AdminServiceImpl.java
+	   
+	 - com.kitri.member.controller
+	   MemberController.java (Servlet : /user)
+
+	 - com.kitri.member.model
+	   MemberDto.java
+	   MemberDetailDto.java
+	   zipcodeDto.java
+	   
+	 - com.kitri.member.model.dao
+	   MemberDao.java (I)
+	   MemberDaoImpl.java
+	 
+	 - com.kitri.member.model.service
+	   MemberService.java (I)
+	   MemberServiceImpl.java
+
+     - com.kitri.member.util
+	   DBConnection.java
+	   DBClose.java
+	   Encoder.java
+	   
 	    
-	  - user
-	    - member
-	      member.jsp
-	      registerok.jsp
-	      registerfail.jsp
-	      idcheck.jsp
-	      zipsearch.jsp
-	      membermodify.jsp
-	      
-	    - login
-	      login.jsp
-	      loginok.jsp
-	      loginfail.jsp
-	      
-	  index.jsp
-	  
-	  
-* HttpSession & Cookie	
-Cookie		:	client	txt >> String
-
-HttpSession	:	server	memory >> Object
-
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+	webContent
+	 - js : member.js
+	 - css : *.css
+	 - img : *.jpg, png, gif
+	 - admin
+	   -member
+	   memberlist.jsp
+	   (-product)
+	   (-board)
+	   
+	 - user
+	   - member
+	     member.jsp
+	     registerok.jsp
+	     registerfail.jsp
+	     idcheck
+	     zipsearch.jsp
+	     membermodify.jsp
+	     
+	   - login
+	     login.jsp
+	     loginok.jsp
+	     loginfail.jsp
+	     
+	     
+	 index.jsp

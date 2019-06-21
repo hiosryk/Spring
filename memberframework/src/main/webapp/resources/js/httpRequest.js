@@ -1,5 +1,5 @@
-function getXMLHttpRequest() {
-	if(window.ActiveXObject) {
+function getXMLHttpRequest(){
+	if(window.ActiveXObject){
 		try{
 			return new ActiveXObject("Msxml2.XMLHTTP");
 		}catch(e1){
@@ -9,9 +9,9 @@ function getXMLHttpRequest() {
 				return null;
 			}
 		}
-	} else if(window.XMLHttpRequest){
+	}else if(window.XMLHttpRequest){
 		return new XMLHttpRequest();
-	} else {
+	}else{
 		return null;
 	}
 }
