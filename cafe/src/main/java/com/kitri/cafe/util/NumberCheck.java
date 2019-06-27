@@ -3,19 +3,19 @@ package com.kitri.cafe.util;
 public class NumberCheck {
 
 	public static int NotNumberToZero(String tmp) {
-		if(isNumber(tmp)) { 
+		if(isNumber(tmp)) {
 			return Integer.parseInt(tmp);
 		}
 		return 0;
 	}
-
+	
 	public static int NotNumberToOne(String tmp) {
-		if(isNumber(tmp)) { 
+		if(isNumber(tmp)) {
 			return Integer.parseInt(tmp);
 		}
 		return 1;
 	}
-
+	
 	private static boolean isNumber(String tmp) {
 		boolean flag = true;
 		if(tmp != null) {
@@ -31,6 +31,7 @@ public class NumberCheck {
 			flag = false;
 		}
 		
-		return false;
+		return flag;
 	}
+	
 }
