@@ -15,7 +15,12 @@ $(document).ready(function() {
 	});
 	
 	$(".moveReplyBtn").click(function() {
-		
+		$("#bcode").val("${bcode}");
+		$("#pg").val("${pg}");
+		$("#key").val("${key}");
+		$("#word").val("${word}");
+		$("#seq").val("${article.seq}");
+		$("#commonForm").attr("method", "GET").attr("action", "${root}/reboard/reply").submit();
 	});
 	
 	$(".firstListBtn").click(function() {
@@ -60,12 +65,12 @@ $(document).ready(function() {
 				width="64" height="22" border="0" align="absmiddle" alt="글쓰기">
 			<img src="${root}/img/board/btn_reply.gif" class="moveReplyBtn" 
 				width="40" height="22" border="0" align="absmiddle" alt="답글">
-		<c:if test="${userInfo.id == article.id}">
+		<c:if test="${userInfo.id == article.id}">	
 			<img src="${root}/img/board/btn_modify.gif" class="moveModifyBtn"
 				border="0" align="absmiddle" alt="글수정">
 			<img src="${root}/img/board/btn_delete.gif" class="moveDeleteBtn" 
-				border="0" align="absmiddle" alt="글삭제">		
-		</c:if>
+				border="0" align="absmiddle" alt="글삭제">	
+		</c:if>			
 		</td>
 		<td valign="bottom" width="100%" style="padding-left: 4px"></td>
 		<td align="right" nowrap valign="bottom">

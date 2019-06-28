@@ -44,6 +44,11 @@ public class ReboardServiceImpl implements ReboardService {
 		reboardDto.setContent(reboardDto.getContent().replace("\n", "<br>"));
 		return reboardDto;
 	}
+	
+	@Override
+	public ReboardDto getArticle(int seq) {
+		return sqlSession.getMapper(ReboardDao.class).viewArticle(seq);
+	}
 
 	@Override
 	public int modifyArticle(ReboardDto reboardDto) {
@@ -55,4 +60,28 @@ public class ReboardServiceImpl implements ReboardService {
 
 	}
 
+	@Override
+	@Transactional
+	public int replyArticle(ReboardDto reboardDto) {
+		ReboardDao reboardDao = sqlSession.getMapper(ReboardDao.class);
+		reboardDao.updateStep(reboardDto);
+		reboardDao.replyArticle(reboardDto);
+		reboardDao.updateReply(reboardDto.getPseq());
+		return reboardDto.getSeq();
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
