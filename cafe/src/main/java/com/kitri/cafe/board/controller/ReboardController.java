@@ -129,7 +129,7 @@ public class ReboardController {
 			reboardDto.setEmail(memberDto.getEmail());
 			
 			seq = reboardService.replyArticle(reboardDto);
-			
+			 
 			if(seq != 0) {
 				model.addAttribute("seq", seq);
 				path = "reboard/writeok";

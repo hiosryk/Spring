@@ -1,7 +1,11 @@
 package com.kitri.cafe.board.model;
 
-public class MemoDto {
+import java.io.Serializable;
 
+public class MemoDto implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
 	private int mseq;
 	private int seq;
 	private String id;
